@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,english
+% ,twoside,openright
+]{tutthesis}
+%\documentclass[12pt,a4paper,finnish]{tutthesis}
+
+\special{papersize=210mm,297mm}
+
+
+
+%
+% Define your basic information
+%
+\author{Cuong Nguyen}
+\title{Bibliometrics} % primary title (for front page)
+\titleB{Otsikko}     % translated title for abstract
+\thesistype{Bachelor of Science thesis} % or Bachelor of Science, Laboratory Report... 
+\examiner{Billy Brumley, Nicola Tuveri} % without title Prof., Dr., MSc or such
+
+% Put your thesis' main language last
+% http://mirrors.ctan.org/macros/latex/required/babel/base/babel.pdf
+\usepackage[english]{babel}
+
+
+\pagenumbering{roman} % was: {Roman}
+\pagestyle{headings}
+\begin{document}
+
+
+
+% Special trick so that internal macros (denoted with @ in their name)
+% can be used outside the cls file (e.g. \@author)
+\makeatletter
+
+
+
+%
+% Create the title page.
+% First the logo. Check its language.
+\thispagestyle{empty}
+\vspace*{-.5cm}\noindent
+\includegraphics[width=8cm]{Tampere_University_logo.png}   % Bilingual logo
+
+
+
+% Then lay out the author, title and type to the center of page.
+\vspace{6.8cm}
+\maketitle
+\vspace{7.7cm} % -> 6.7cm if thesis title needs two lines
+
+% Last some additional info to the bottom-right corner
+\begin{flushright}  
+  \begin{minipage}[c]{7.8cm}
+    \begin{spacing}{1.0}
+      \textsf{Examiner: Prof. \@examiner}\\
+      \textsf{Examiner and topic approved on}
+    \end{spacing}
+  \end{minipage}
+\end{flushright}
+
+% Leave the backside of title page empty in twoside mode
+\if@twoside
+\clearpage
+\fi
+
+\end{document}

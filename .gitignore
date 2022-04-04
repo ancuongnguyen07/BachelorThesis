@@ -1,0 +1,6 @@
+*.aux
+Bibliometrics-Thesis.txt
+*.pdf
+Bibliometrics-Thesis.synctex*
+*.out
+*.log
