@@ -4,3 +4,4 @@ Bibliometrics-Thesis.txt
 Bibliometrics-Thesis.synctex*
 *.out
 *.log
+!Reference/*
